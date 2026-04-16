@@ -1,0 +1,87 @@
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000f38; /* Aapka purana dark blue color */
+}
+
+/* 2. Dark mode ke liye naye colors */
+[data-theme='dark'] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+}
+
+/* 3. Body ko batayein ke ye variables use kare */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: 0.4s; /* Rang thoda aaram se badlega */
+}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+.container{
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 20px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 25px;
+  /* Ye do lines sabse zaroori hain */
+  background: var(--text-color); 
+  color: var(--background-color); 
+  border: 0;
+  outline: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+.btn img{
+  width: 20px;
+  margin-left: 10px;
+}
+.btn.dark-btn{
+  background: var(--text-color);
+  color : var(--background-color);
+}
+/* Dark Mode mein text ko white karne ke liye */
+[data-theme='dark'] .campus h2, 
+[data-theme='dark'] .programs h2,
+[data-theme='dark'] .title p {
+    color: #ffffff !important;
+}
+
+/* See More button ka text agar nazar nahi aa raha */
+[data-theme='dark'] .btn {
+    color: #000000; /* Dark mode mein button white hai to text black hona chahiye */
+}
+/* Dark mode mein "What We Offer" wali heading ko white karne ke liye */
+[data-theme='dark'] .title h2 {
+    color: #ffffff !important;
+}
+@media (max-width: 1200px) {
+  .container{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn{
+    padding: 14px 22px;
+    font-size: 14px;
+  }
+}
