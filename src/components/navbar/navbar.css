@@ -18,9 +18,7 @@ nav{
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 5px 20px;
-    font-size: 16px;
-    margin: 5px 10px; 
+    margin: 5px 10px;
     font-size: 14px;
 }
 .dark-nav{
@@ -56,7 +54,7 @@ nav ul {
 }
 
 /* Responsive Styles */
-@media (max-width: 1000px) {
+@media (max-width: 840px) {
    .logo{
         width: 120px;
     }
@@ -65,27 +63,31 @@ nav ul {
         font-size: 14px;
     }
 }
-@media (max-width: 1000px){
+@media (max-width: 840px){
     nav{
         flex-direction: column;
         padding: 15px 0;
     }
     nav ul{
-        position: fixed;
+        overflow-y: auto;
+       position: fixed;
         top: 0;
-        right: -200px; /* Shuru mein screen se bahar */
+        right: -200px; /* Menu ko screen se bahar le jaata hai */
         bottom: 0;
         width: 200px;
         height: 100vh;
         background: #212ea0;
         display: flex;
-        flex-direction: column; /* Items ko ek ke niche ek laane ke liye */
+        flex-direction: column;
         padding-top: 70px;
-        transition: 0.5s;
+        transition: right 0.5s ease; /* Smooth animation ke liye */
         z-index: -1;
+        box-sizing: border-box;      
+        overflow-y: auto;          
+        overscroll-behavior: contain;
     }
-    nav ul.hide-mobile-menu{
-        right: 0; /* Menu ko screen se bahar le jaata hai */
+    nav ul:not(.hide-mobile-menu){
+        right: 0; /* Menu ko screen par laata hai */
     }
     nav ul li{
         margin: 20px 30px; /* Menu items ke beech gap */
@@ -104,7 +106,4 @@ nav ul {
      top: 25px;        
      z-index: 10;        
     }
-    .hide-mobile-menu{
-        right: -200px;
-    }
-}
+}   
