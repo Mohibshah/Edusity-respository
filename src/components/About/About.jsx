@@ -5,7 +5,7 @@ import play_icon from '../../assets/play-icon.png'
 
 function About({setPlaystate}) {
     return (
-        <div className='about'>
+        <div className='about' id='about'>
             <div className="about-left">
                 <img src={About_img} alt="" className='about-img' />
                 <img src={play_icon} alt="" className='play-icon' onClick={() => setPlaystate(true)} />

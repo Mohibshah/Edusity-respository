@@ -2,7 +2,7 @@ import React from 'react'
 import './Title.css'
 import { motion } from 'framer-motion'
 
-export const Title = ({subTitle,Title}) => {
+export const Title = ({subTitle,title}) => {
   return (
    <motion.div 
   className='title'
@@ -12,7 +12,7 @@ export const Title = ({subTitle,Title}) => {
   transition={{ duration: 0.6 }}
 >
   <p>{subTitle}</p>
-  <h2>{Title}</h2>
+  <h2>{title}</h2>
 </motion.div>
   )
 }

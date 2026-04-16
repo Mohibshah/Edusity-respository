@@ -1,7 +1,7 @@
 nav{
     width: 100%;
     /* background: #333; */
-    color: #fff;
+    color: var(--accent-contrast);
     padding: 10px 5%;
     position: fixed;
     top: 0;
@@ -22,7 +22,7 @@ nav ul li{
     font-size: 14px;
 }
 .dark-nav{
-    background: #212ea0;
+    background: var(--accent-color);
     transition: 0.5s;
 }
 .menu-icon{
